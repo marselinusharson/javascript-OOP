@@ -23,14 +23,12 @@
         }
       }
 
-
       const counter = new Counter();
-      counter.increment()
-      counter.increment()
-      counter.increment()
-      counter.increment()
-      counter.increment()
-      console.log(counter.get())
+      for (let i = 1; i <= 10; i++) {
+        counter.increment();
+        console.log(`counter  bertambah jadi ${counter.get()}`);
+      }
+     
     </script>
   </body>
 </html>

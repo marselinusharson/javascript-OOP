@@ -8,19 +8,19 @@ class Employee {
   }
 }
 //class inheritance
-class Manager extends Employee {
+class Manager  extends Employee{
   sayHello(name) {
     console.info(`Hello ${name} my name is Manager ${this.firstname}`);
   }
 }
 
-const dinda = new Employee();
-dinda.firstname = "dinda";
-dinda.sayHello("Marsel");
+const hinata = new Employee();
+hinata.firstname = "hinata";
+hinata.sayHello("Marsel");
 
-const anjing = new Manager();
-anjing.firstname = "anjing";
-anjing.sayHello("dinda");
+const ino = new Manager();
+ino.firstname = "ino";
+ino.sayHello("hinata");
 
-console.info(dinda);
-console.info(anjing);
+console.info(hinata);
+console.info(ino);
