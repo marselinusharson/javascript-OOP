@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error</title>
+  </head>
+  <body>
+    <script>
+      class MathUtils {
+        static sum(...num) {
+          if (num.length == 0) {
+            throw new Error("Total parameter harus lebih dari 0");
+          }
+          let total = 0;
+          for (const number of num) {
+            total += number;
+          }
+          return total;
+        }
+      }
+      const nomor = MathUtils.sum(1, 1, 1, 1, 1);
+      MathUtils.sum();
+      console.log(nomor);
+      console.log(nomor);
+    </script>
+  </body>
+</html>

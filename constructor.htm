@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor</title>
+  </head>
+  <body>
+    <script>
+      // Constructor function
+      function Person(firstName, lastName) {
+        //memberikan property==============
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        //bisa juga membuat method========
+        this.sayHallo = function (name) {
+          console.info(`Hello ${name}, my name is ${this.firstName}`);
+        };
+        this.sum = function (a, b) {
+          return a + b;
+        };
+      }
+
+      // membuat objek dari constructor=============
+      const hinata = new Person("Hinata", "Hyuga"); //gunakan keyword new
+      //mengisi vakue dari properti
+      // hinata.firstName = "Dinda";
+      // hinata.lastName = "Juliantari";
+      hinata.sayHallo("Marsel");
+      console.log(`Hasil penjumlahan  ${hinata.sum(1, 2)}`);
+
+      const dika = new Person("Dika", "Putri"); //kirim langsung lewat parameter
+      // dika.firstName = "Dika";
+      // dika.sayHallo("Marsel");
+
+      console.log(hinata);
+      console.log(dika);
+
+      const doni = new Person("Joki");
+      doni.sayHallo("Doni");
+    </script>
+  </body>
+</html>

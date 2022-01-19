@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>method di constructor function</title>
+  </head>
+  <body>
+    <script>
+      function Person() {
+        this.firstName = "";
+        this.middleName = "";
+        this.lastName = "";
+        //method
+        this.sayHello = function (name) {
+          console.info(`Hello ${name} my name is ${this.firstName}`);
+        };
+        //bisa ditambahkan sebanyak -banyaknya
+        this.pujian = function (name, ciri) {
+          return `${name} kamu sangat ${ciri}`;
+        };
+      }
+      //ini objek dan semua mewarisi method sayHello:
+      //Objek eko:
+      const eko = new Person();
+      eko.firstName = "Eko";
+      eko.middleName = "OURA";
+      eko.lastName = "julyanto";
+      eko.sayHello("dinda");
+      console.info(eko.pujian("dinda", "cantik"));
+
+      //
+      //Objek Budi
+      const budi = new Person();
+      budi.firstName = "Budi";
+      budi.middleName = "Nugraha";
+      budi.lastName = "Jr";
+      budi.sayHello("Hina");
+      console.info(eko.pujian("Hina", "cantik"));
+      //
+      //Objek Hina
+      const hina = new Person();
+      hina.firstName = "Hina";
+      hina.middleName = "Hinata";
+      hina.lastName = "Hyuga";
+      hina.sayHello("Trihana");
+      console.info(eko.pujian("Trihana", "cantik"));
+
+      console.info(eko);
+      console.info(budi);
+      console.info(hina);
+    </script>
+  </body>
+</html>
